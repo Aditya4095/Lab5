@@ -9,6 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 const API_KEY = "4a08f9b36c9548e38950fd9e46b0c8ef";
+app.use(express.static(path.join(__dirname)));
 
 // Recipe search endpoint
 app.get("/recipes", async (req, res) => {
